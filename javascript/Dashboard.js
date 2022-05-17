@@ -1,4 +1,6 @@
-let apiProductApi = new TempApi.ProductApi();import TempApi from '../src/index';const onClickPaginationButton = (chunk, pagination) => {
+let apiProductApi = new TempApi.ProductApi();import TempApi from '../src/index';document.getElementById('izgi1').onclick = (event) => {
+    event.preventDefault();
+    {  location.href= '/Count' ;}};const onClickPaginationButton = (chunk, pagination) => {
     for (let i = 0; i < pagination.children.length; i++) {
       if (
         pagination.children[i].classList.value.includes("active") === true
