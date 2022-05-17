@@ -1,0 +1,73 @@
+
+[{
+    "methodType":"POST",
+    "methodName":"createproduct",
+    "returnType":{
+      "primitive":false,
+      "jsType":"",
+      "modelName":"Product"
+    },
+    "importStatement":"import TempApi from '../src/index';",
+    "apiInstance":"let apiProductApi = new TempApi.ProductApi();",
+    "importModelParameter":["let product = new TempApi.Product();"],
+    "modelNames":["product"],
+    "functionNextTemplate":"/**nextFunction*/",
+    "apiCallPromisified":"apiProductApi.createproduct( product, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); /**nextFunction*/}});"
+  },{
+    "methodType":"DELETE",
+    "methodName":"deleteproduct",
+    "returnType":{
+
+      "primitive":"true",
+      "type":"null"
+    },
+    "importStatement":"import TempApi from '../src/index';",
+    "apiInstance":"let apiProductApi = new TempApi.ProductApi();",
+    "importModelParameter":[],
+    "modelNames":[],
+    "functionNextTemplate":"/**nextFunction*/",
+    "apiCallPromisified":"apiProductApi.deleteproduct( productId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully.');/**nextFunction*/}});"
+  },{
+    "methodType":"GETALL",
+    "methodName":"getAllproduct",
+    "returnType":{
+      "primitive":false,
+      "jsType":"Array",
+      "modelName":"[Product]"
+    },
+    "importStatement":"import TempApi from '../src/index';",
+    "apiInstance":"let apiProductApi = new TempApi.ProductApi();",
+    "importModelParameter":[],
+    "modelNames":[],
+    "functionNextTemplate":"/**nextFunction*/",
+    "apiCallPromisified":"apiProductApi.getAllproduct((error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); /**nextFunction*/}});"
+  },{
+    "methodType":"GET",
+    "methodName":"getproduct",
+    "returnType":{
+      "primitive":false,
+      "jsType":"",
+      "modelName":"Product"
+    },
+    "importStatement":"import TempApi from '../src/index';",
+    "apiInstance":"let apiProductApi = new TempApi.ProductApi();",
+    "importModelParameter":[],
+    "modelNames":[],
+    "functionNextTemplate":"/**nextFunction*/",
+    "apiCallPromisified":"apiProductApi.getproduct( productId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); /**nextFunction*/}});"
+  },{
+    "methodType":"PUT",
+    "methodName":"updateproduct",
+    "returnType":{
+      "primitive":false,
+      "jsType":"",
+      "modelName":"Product"
+    },
+    "importStatement":"import TempApi from '../src/index';",
+    "apiInstance":"let apiProductApi = new TempApi.ProductApi();",
+    "importModelParameter":[],
+    "modelNames":[],
+    "functionNextTemplate":"/**nextFunction*/",
+    "apiCallPromisified":"apiProductApi.updateproduct( productId, opts, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); /**nextFunction*/}});"
+  }
+]
