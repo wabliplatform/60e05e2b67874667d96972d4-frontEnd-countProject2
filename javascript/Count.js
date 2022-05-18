@@ -32,8 +32,12 @@ document.getElementById("formFile").addEventListener("change", async (e) => {
 document.getElementById("i7ads").onclick = (event) => {
     console.log('Check7');
     console.log(document
-       .querySelector("[annotationname = 'pImage']")
-       .getAttribute("name"));
+         .querySelector("[annotationname = 'pImage']")
+         .getAttribute("data-image-base64"));
+  
+  console.log(String(document
+         .querySelector("[annotationname = 'pImage']")
+         .getAttribute("data-image-base64")));
   event.preventDefault();
 
     product["pImage"] = {
@@ -62,7 +66,7 @@ document.getElementById("i7ads").onclick = (event) => {
     } else {
       console.log("API called successfully. Returned data: " + data);
       {
-        location.href = "/Dashboard/" + response.body.query._id + "";
+        //location.href = "/Dashboard/" + response.body.query._id + "";
       }
     }
   });
