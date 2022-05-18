@@ -40,8 +40,8 @@ function calculateSize(img, maxWidth, maxHeight) {
   return [width, height];
 }
 
-const MAX_WIDTH = 320;
-const MAX_HEIGHT = 180;
+const MAX_WIDTH = 400;
+const MAX_HEIGHT = 400;
 const MIME_TYPE = "image/jpeg";
 const QUALITY = 0.7;
 
