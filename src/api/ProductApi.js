@@ -60,6 +60,7 @@ export default class ProductApi {
       let queryParams = {
       };
       let headerParams = {
+          'Access-Control-Allow-Origin': '*'
       };
       let formParams = {
       };
