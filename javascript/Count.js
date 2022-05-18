@@ -30,24 +30,25 @@ document.getElementById("formFile").addEventListener("change", async (e) => {
     .setAttribute("name", e.target.files[0].name);
 });
 document.getElementById("i7ads").onclick = (event) => {
-    console.log('Check10');
-//     console.log(document
-//          .querySelector("[annotationname = 'pImage']")
-//          .getAttribute("data-image-base64"));
+    console.log('Check11');
+    console.log(document
+         .querySelector("[annotationname = 'pImage']")
+         .getAttribute("data-image-base64"));
   
-//   console.log(String(document
-//          .querySelector("[annotationname = 'pImage']")
-//          .getAttribute("data-image-base64")));
-//   event.preventDefault();
+  console.log(String(document
+         .querySelector("[annotationname = 'pImage']")
+         .getAttribute("data-image-base64")));
+  event.preventDefault();
 
     product["pImage"] = {
-      data:      document
-        .querySelector("[annotationname = 'pImage']")
-        .getAttribute("data-image-base64") !== null
-        ? String( document
-            .querySelector("[annotationname = 'pImage']")
-            .getAttribute("data-image-base64"))
-        : document.querySelector("[annotationname = 'pImage']").src,
+      data: "123",
+//       data:      document
+//         .querySelector("[annotationname = 'pImage']")
+//         .getAttribute("data-image-base64") !== null
+//         ? String( document
+//             .querySelector("[annotationname = 'pImage']")
+//             .getAttribute("data-image-base64"))
+//         : document.querySelector("[annotationname = 'pImage']").src,
     name: document
       .querySelector("[annotationname = 'pImage']")
       .getAttribute("name"),
