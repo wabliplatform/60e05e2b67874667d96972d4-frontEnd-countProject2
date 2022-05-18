@@ -94,6 +94,7 @@ document.getElementById("formFile").addEventListener("change", async (e) => {
 
 document.getElementById("i7ads").onclick = (event) => {
   event.preventDefault();
+  console.log('Check1');
   product["pImage"] = {
     data:
       document
