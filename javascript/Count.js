@@ -20,18 +20,78 @@ const convertBase64 = (file) => {
     };
   });
 };
+
+function calculateSize(img, maxWidth, maxHeight) {
+  let width = img.width;
+  let height = img.height;
+
+  // calculate the width and height, constraining the proportions
+  if (width > height) {
+    if (width > maxWidth) {
+      height = Math.round((height * maxWidth) / width);
+      width = maxWidth;
+    }
+  } else {
+    if (height > maxHeight) {
+      width = Math.round((width * maxHeight) / height);
+      height = maxHeight;
+    }
+  }
+  return [width, height];
+}
+
+const MAX_WIDTH = 320;
+const MAX_HEIGHT = 180;
+const MIME_TYPE = "image/jpeg";
+const QUALITY = 0.7;
+
 document.getElementById("formFile").addEventListener("change", async (e) => {
-  let imageBase64 = await uploadImage(e);
-  document
-    .getElementById("formFile")
-    .setAttribute("data-image-base64", imageBase64);
-  document
-    .getElementById("formFile")
-    .setAttribute("name", e.target.files[0].name);
+//   let imageBase64 = await uploadImage(e);
+//   document
+//     .getElementById("formFile")
+//     .setAttribute("data-image-base64", imageBase64);
+//   document
+//     .getElementById("formFile")
+//     .setAttribute("name", e.target.files[0].name);
+  
+   const file = e.target.files[0]; // get the file
+  const blobURL = URL.createObjectURL(file);
+  const img = new Image();
+  img.src = blobURL;
+  img.onerror = function () {
+    URL.revokeObjectURL(this.src);
+    // Handle the failure properly
+    console.log("Cannot load image");
+  };
+  img.onload = function () {
+    URL.revokeObjectURL(this.src);
+    const [newWidth, newHeight] = calculateSize(img, MAX_WIDTH, MAX_HEIGHT);
+    const canvas = document.createElement("canvas");
+    canvas.width = newWidth;
+    canvas.height = newHeight;
+    const ctx = canvas.getContext("2d");
+    ctx.drawImage(img, 0, 0, newWidth, newHeight);
+    canvas.toBlob(
+      async (blob) => {
+        // Handle the compressed image. es. upload or save in local state
+        //displayInfo('Original file', file);
+        //displayInfo('Compressed file', blob);
+        const base64 = await convertBase64(blob);
+
+        document
+          .getElementById("formFile")
+          .setAttribute("data-image-base64", base64);
+        document
+          .getElementById("formFile")
+          .setAttribute("name", e.target.files[0].name);
+      },
+      MIME_TYPE,
+      QUALITY
+    );
+  
 });
 document.getElementById("i7ads").onclick = (event) => {
   event.preventDefault();
- console.log('Check1');
   product["pImage"] = {
     data:
       document
@@ -59,9 +119,9 @@ document.getElementById("i7ads").onclick = (event) => {
       console.error(error);
     } else {
       console.log("API called successfully. Returned data: " + data);
-//       {
-//         location.href = "/Dashboard/" + response.body.query._id + "";
-//       }
+      {
+        location.href = "/Dashboard/" + response.body.query._id + "";
+      }
     }
   });
 };
