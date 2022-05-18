@@ -30,17 +30,14 @@ document.getElementById("formFile").addEventListener("change", async (e) => {
     .setAttribute("name", e.target.files[0].name);
 });
 document.getElementById("i7ads").onclick = (event) => {
-    console.log('Check4');
+    console.log('Check5');
     console.log(document
        .querySelector("[annotationname = 'pImage']")
        .getAttribute("name"));
   event.preventDefault();
-product["pImage"] = {
-  data: "123",
-  name: "IMG_20220517_142734.jpg";
-}
-  //   product["pImage"] = {
-//     data:
+
+    product["pImage"] = {
+    data: '123',
 //       document
 //         .querySelector("[annotationname = 'pImage']")
 //         .getAttribute("data-image-base64") !== null
@@ -48,10 +45,10 @@ product["pImage"] = {
 //             .querySelector("[annotationname = 'pImage']")
 //             .getAttribute("data-image-base64")
 //         : document.querySelector("[annotationname = 'pImage']").src,
-//     name: document
-//       .querySelector("[annotationname = 'pImage']")
-//       .getAttribute("name"),
-//   };
+    name: document
+      .querySelector("[annotationname = 'pImage']")
+      .getAttribute("name"),
+  };
   product["pTitle"] = document.querySelector(
     "[annotationname = 'pTitle']"
   ).value;
