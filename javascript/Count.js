@@ -35,19 +35,23 @@ document.getElementById("i7ads").onclick = (event) => {
         .querySelector("[annotationname = 'pImage']")
         .getAttribute("data-image-base64"));
   event.preventDefault();
-  product["pImage"] = {
-    data:
-      document
-        .querySelector("[annotationname = 'pImage']")
-        .getAttribute("data-image-base64") !== null
-        ? document
-            .querySelector("[annotationname = 'pImage']")
-            .getAttribute("data-image-base64")
-        : document.querySelector("[annotationname = 'pImage']").src,
-    name: document
-      .querySelector("[annotationname = 'pImage']")
-      .getAttribute("name"),
-  };
+product["pImage"] = {
+  data: "123",
+  name: "123"
+}
+  //   product["pImage"] = {
+//     data:
+//       document
+//         .querySelector("[annotationname = 'pImage']")
+//         .getAttribute("data-image-base64") !== null
+//         ? document
+//             .querySelector("[annotationname = 'pImage']")
+//             .getAttribute("data-image-base64")
+//         : document.querySelector("[annotationname = 'pImage']").src,
+//     name: document
+//       .querySelector("[annotationname = 'pImage']")
+//       .getAttribute("name"),
+//   };
   product["pTitle"] = document.querySelector(
     "[annotationname = 'pTitle']"
   ).value;
