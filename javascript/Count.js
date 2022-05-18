@@ -30,14 +30,14 @@ document.getElementById("formFile").addEventListener("change", async (e) => {
     .setAttribute("name", e.target.files[0].name);
 });
 document.getElementById("i7ads").onclick = (event) => {
-    console.log('Check3');
+    console.log('Check4');
     console.log(document
-        .querySelector("[annotationname = 'pImage']")
-        .getAttribute("data-image-base64"));
+       .querySelector("[annotationname = 'pImage']")
+       .getAttribute("name"));
   event.preventDefault();
 product["pImage"] = {
   data: "123",
-  name: "123"
+  name: "IMG_20220517_142734.jpg";
 }
   //   product["pImage"] = {
 //     data:
