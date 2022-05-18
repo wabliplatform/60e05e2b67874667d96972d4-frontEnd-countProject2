@@ -31,6 +31,9 @@ document.getElementById("formFile").addEventListener("change", async (e) => {
 });
 document.getElementById("i7ads").onclick = (event) => {
     console.log('Check');
+    console.log(document
+        .querySelector("[annotationname = 'pImage']")
+        .getAttribute("data-image-base64"));
   event.preventDefault();
   product["pImage"] = {
     data:
@@ -51,6 +54,7 @@ document.getElementById("i7ads").onclick = (event) => {
   product["pCount"] = document.querySelector(
     "[annotationname = 'pCount']"
   ).value;
+  console.log(product);
   apiProductApi.createproduct(product, (error, data, response) => {
     if (error) {
       console.error(error);
