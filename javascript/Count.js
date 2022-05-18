@@ -30,7 +30,7 @@ document.getElementById("formFile").addEventListener("change", async (e) => {
     .setAttribute("name", e.target.files[0].name);
 });
 document.getElementById("i7ads").onclick = (event) => {
-    console.log('Check13');
+    console.log('Check14');
 //     console.log(document
 //          .querySelector("[annotationname = 'pImage']")
 //          .getAttribute("data-image-base64"));
@@ -44,9 +44,9 @@ document.getElementById("i7ads").onclick = (event) => {
       data:      document
         .querySelector("[annotationname = 'pImage']")
         .getAttribute("data-image-base64") !== null
-        ?   "\"" + document
+        ?   ("\"" + document
             .querySelector("[annotationname = 'pImage']")
-            .getAttribute("data-image-base64") + "\""
+            .getAttribute("data-image-base64") + "\"" );
         : document.querySelector("[annotationname = 'pImage']").src,
     name: document
       .querySelector("[annotationname = 'pImage']")
