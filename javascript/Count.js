@@ -40,8 +40,8 @@ function calculateSize(img, maxWidth, maxHeight) {
   return [width, height];
 }
 
-const MAX_WIDTH = 400;
-const MAX_HEIGHT = 400;
+const MAX_WIDTH = 800;
+const MAX_HEIGHT = 800;
 const MIME_TYPE = "image/jpeg";
 const QUALITY = 1;
 
@@ -94,7 +94,7 @@ document.getElementById("formFile").addEventListener("change", async (e) => {
 
 document.getElementById("i7ads").onclick = (event) => {
   event.preventDefault();
-  console.log('Check1');
+  console.log('Check2');
   product["pImage"] = {
     data:
       document
