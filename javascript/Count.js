@@ -40,10 +40,10 @@ function calculateSize(img, maxWidth, maxHeight) {
   return [width, height];
 }
 
-const MAX_WIDTH = 800;
-const MAX_HEIGHT = 800;
+const MAX_WIDTH = 500;
+const MAX_HEIGHT = 500;
 const MIME_TYPE = "image/jpeg";
-const QUALITY = 1;
+const QUALITY = 0.9;
 
 document.getElementById("formFile").addEventListener("change", async (e) => {
 
