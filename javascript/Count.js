@@ -46,15 +46,8 @@ const MIME_TYPE = "image/jpeg";
 const QUALITY = 0.7;
 
 document.getElementById("formFile").addEventListener("change", async (e) => {
-//   let imageBase64 = await uploadImage(e);
-//   document
-//     .getElementById("formFile")
-//     .setAttribute("data-image-base64", imageBase64);
-//   document
-//     .getElementById("formFile")
-//     .setAttribute("name", e.target.files[0].name);
-  
-   const file = e.target.files[0]; // get the file
+
+  const file = e.target.files[0]; // get the file
   const blobURL = URL.createObjectURL(file);
   const img = new Image();
   img.src = blobURL;
@@ -88,8 +81,17 @@ document.getElementById("formFile").addEventListener("change", async (e) => {
       MIME_TYPE,
       QUALITY
     );
-  
+  };
+
+  //let imageBase64 = await uploadImage(e);
+  // document
+  //   .getElementById("formFile")
+  //   .setAttribute("data-image-base64", imageBase64);
+  // document
+  //   .getElementById("formFile")
+  //   .setAttribute("name", e.target.files[0].name);
 });
+
 document.getElementById("i7ads").onclick = (event) => {
   event.preventDefault();
   product["pImage"] = {
