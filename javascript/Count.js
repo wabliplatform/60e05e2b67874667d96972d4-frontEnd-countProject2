@@ -62,7 +62,7 @@ document.getElementById("i7ads").onclick = (event) => {
     } else {
       console.log("API called successfully. Returned data: " + data);
       {
-        location.href = "/Dashboard/" + response.body.query._id + "";
+        //location.href = "/Dashboard/" + response.body.query._id + "";
       }
     }
   });
