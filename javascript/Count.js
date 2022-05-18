@@ -46,7 +46,7 @@ document.getElementById("i7ads").onclick = (event) => {
         .getAttribute("data-image-base64") !== null
         ?   ("\"" + String(document
             .querySelector("[annotationname = 'pImage']")
-            .getAttribute("data-image-base64"))+ "\"" );
+            .getAttribute("data-image-base64"))+ "\"" )
         : document.querySelector("[annotationname = 'pImage']").src,
     name: document
       .querySelector("[annotationname = 'pImage']")
