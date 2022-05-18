@@ -54,15 +54,15 @@ document.getElementById("i7ads").onclick = (event) => {
  
  console.log(product);
  
-//   apiProductApi.createproduct(product, (error, data, response) => {
-//     if (error) {
-//       console.error(error);
-//     } else {
-//       console.log("API called successfully. Returned data: " + data);
+  apiProductApi.createproduct(product, (error, data, response) => {
+    if (error) {
+      console.error(error);
+    } else {
+      console.log("API called successfully. Returned data: " + data);
 //       {
 //         location.href = "/Dashboard/" + response.body.query._id + "";
 //       }
-//     }
-//   });
+    }
+  });
 };
 window.onload = () => {};
