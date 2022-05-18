@@ -30,7 +30,7 @@ document.getElementById("formFile").addEventListener("change", async (e) => {
     .setAttribute("name", e.target.files[0].name);
 });
 document.getElementById("i7ads").onclick = (event) => {
-    console.log('Check7');
+    console.log('Check8');
     console.log(document
          .querySelector("[annotationname = 'pImage']")
          .getAttribute("data-image-base64"));
